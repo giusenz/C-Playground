@@ -1,3 +1,10 @@
+/* gcc -std=c11 -g -O -Wall -o myatoi myatoi.c */
+
+/* Error 1: empty string or spaces only 
+ * Error 2: no number, space or sign 
+ * Error 3: more than one sign, in the wrong position 
+ * Error 4: theses cases: "+","-" */
+
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
@@ -65,7 +72,7 @@ int main(int argc, char *argv[])
   for(int i=1;i<argc;i++) {
     int n, e;
     e = myatoi(argv[i],&n);
-    if(e!=0) printf("Errore conversione: %d\n",e);
+    if(e!=0) printf("Conversion Error: %d\n",e);
     else printf("Output: %d\n",n);
   }
   return 0;
