@@ -3,7 +3,7 @@
 /* Error 1: empty string or spaces only 
  * Error 2: no number, space or sign 
  * Error 3: more than one sign, in the wrong position 
- * Error 4: theses cases: "+","-" */
+ * Error 4: these cases: "+","-" */
 
 #define _GNU_SOURCE
 #include <stdio.h>
